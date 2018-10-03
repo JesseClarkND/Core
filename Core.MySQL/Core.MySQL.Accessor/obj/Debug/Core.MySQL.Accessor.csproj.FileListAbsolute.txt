@@ -1,0 +1,7 @@
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\bin\Debug\Core.MySQL.Accessor.dll
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\bin\Debug\Core.MySQL.Accessor.pdb
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\bin\Debug\mysql.data.dll
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\bin\Debug\mysql.data.entity.dll
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\obj\Debug\Core.MySQL.Accessor.csprojResolveAssemblyReference.cache
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\obj\Debug\Core.MySQL.Accessor.dll
+C:\Users\hogarth45\Documents\Programming\Core\Core.MySQL\Core.MySQL.Accessor\obj\Debug\Core.MySQL.Accessor.pdb
