@@ -4,25 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Core.MySQL.Accessor
 {
     public class DatabaseManager
     {
+        private static string _dbString = "";
         public static MySqlConnection GetConnection()
         {
-            //string sqlDbString = "Server=69.89.31.72;Port=3306;Database=blackdx5_test;Uid=blackdx5_tester;Pwd=B2$oxg(pkxEE;";//Settings.ConnectionString;
+            if (String.IsNullOrEmpty(_dbString))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(@"C:\datasource.xml");
 
-           // MySqlConnection conn = new MySqlConnection(sqlDbString);
+                XmlNode node = doc.DocumentElement.SelectSingleNode("/root/SQLConnectionString");
+                _dbString = node.InnerText;
+            }
 
-            MySqlConnectionStringBuilder conn_string = new MySqlConnectionStringBuilder();
-            conn_string.Server = "69.89.31.72";
-            conn_string.Port = 3306;
-            conn_string.UserID = "blackdx5_tester";
-            conn_string.Password = "B2$oxg(pkxEE";
-            conn_string.Database = "blackdx5_test";
-
-            MySqlConnection conn = new MySqlConnection(conn_string.ToString());
+            MySqlConnection conn = new MySqlConnection(_dbString);
 
             return conn;
         }

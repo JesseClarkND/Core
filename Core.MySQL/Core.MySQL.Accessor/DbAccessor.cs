@@ -155,7 +155,7 @@ namespace Core.MySQL.Accessor
                 MySqlParameter parameter = new MySqlParameter();
                 parameter.DbType = DbType.Int32;
                 //sqlLiteParameter.DbType = (System.Data.DbType)parameter.Type;
-                parameter.ParameterName = ":" + keyField;
+                parameter.ParameterName = "@" + keyField;
                 parameter.Value = keyValue;
                 cmd.Parameters.Add(parameter);
 
@@ -276,7 +276,7 @@ namespace Core.MySQL.Accessor
                 //cmd.Parameters.Add(":" + parameter.Name, val);
                 MySqlParameter sqlLiteParameter = new MySqlParameter();
                 sqlLiteParameter.DbType = (System.Data.DbType)parameter.Type;
-                sqlLiteParameter.ParameterName = ":" + parameter.Name;
+                sqlLiteParameter.ParameterName = "@" + parameter.Name;
                 sqlLiteParameter.Value = val;
                 cmd.Parameters.Add(sqlLiteParameter);
             }
